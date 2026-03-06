@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        label {
+            align-self: flex-start;
+            font-size: 16px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #6c63ff;
+            outline: none;
+        }
+
+        button {
+               background-color: rgb(6, 140, 251);
+    color: aliceblue;
+    width: 90px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 10px;
+    left: 1%;
+    top: 5%;
+    margin-top: 10%;
+    height: 40px;
+font-size: 12px;
+        }
+
+        button:hover {
+            background-color: #4796fd;
+        }
+
+    
+        #resposta {
+            background-color: #e8f7ff;
+            border: 1px solid #b3e0ff;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: left;
+            display: none;
+        }
+
+        #resposta h3 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #resposta p {
+            color: #555;
+            font-size: 16px;
+        }
+          .voltar {
+  background: #2295f9;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 2cm;
+}
+    </style>
+</head>
+<body>
+
+<section id="perguntas">
+    <p>Fique à vontade para perguntar qualquer coisa relacionada à Aprenda e Proteja. Responderei assim que possível!</p>
+
+    <form action="#" method="post" id="formPergunta">
+
+
+        <label for="pergunta"></label><br>
+        <textarea id="pergunta" name="pergunta" rows="4" placeholder="Digite sua pergunta aqui" required></textarea><br><br>
+
+        <button type="submit">Enviar Pergunta</button>
+        
+                <button class="voltar"><a href="index3.html" style="color: #e8f7ff; text-decoration: none;">⬅ Voltar</button>
+            
+    </form>
+
+    <div id="resposta" style="margin-top: 20px; display: none;">
+        <h3>Resposta:</h3>
+        <p id="respostaTexto"></p>
+    </div>
+</section>
+ 
+        
+<script>
+    document.getElementById('formPergunta').addEventListener('submit', function(event) {
+        event.preventDefault();  
+
+        
+        const nome = document.getElementById('nome').value;
+        const pergunta = document.getElementById('pergunta').value;
+
+
+        let resposta = "Obrigado pela sua pergunta, " + nome + "! Aqui esta a sua pergunta: " + pergunta + ". Em breve, alguem respondera.";
+
+
+        document.getElementById('respostaTexto').textContent = resposta;
+        document.getElementById('resposta').style.display = 'block';
+
+        
+        document.getElementById('formPergunta').reset();
+    });
+</script>
+
+               
+        </section>
+    </main>
+</body>
+</html>

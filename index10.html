@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .biatriz {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f4f6f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.biatriz h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.biatriz label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.biatriz p {
+  width: 100%;
+  min-height: 80px;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+.select {
+     width: 100%;
+  min-height: 80px;
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.biatriz button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  margin-left: 220px;
+  border-radius: 6px;
+  background-color: #338afb;
+  color: white;
+  width: 100px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  gap: 10px;            
+}
+
+
+.biatriz button:hover {
+  background-color: #1674bc;
+}
+
+#savedMessage {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+    </style>
+</head>
+<body>
+   <section class="biatriz">
+  <h2> Reflexão Semanal de Aprendizado</h2>
+
+  <form id="weeklyForm">
+    
+    <label> O que você aprendeu esta semana?</label>
+    <p id="learned" required></p>
+
+    <label> Como você avalia seu desempenho?</label>
+    <p id="performance" required></p>
+
+    <label> Quais dificuldades encontrou?</label>
+    <p id="difficulties"></p>
+
+    <label for="perfil"> Como avalias a nossa plataforma?</label>
+    <p id="improvements"></p>
+    
+ </form>
+    <button type="submit">Salvar Reflexão</button>
+    <button><a href="index3.html" style="color: white; text-decoration: none;">voltar <br> 🔙</button>
+
+
+  <div id="savedMessage"></div>
+</section>
+<script>
+    document.getElementById("weeklyForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const reflection = {
+    learned: document.getElementById("learned").value,
+    performance: document.getElementById("performance").value,
+    difficulties: document.getElementById("difficulties").value,
+    improvements: document.getElementById("improvements").value,
+    date: new Date().toLocaleDateString()
+  };
+
+  localStorage.setItem("weeklyReflection", JSON.stringify(reflection));
+
+  document.getElementById("savedMessage").innerText = 
+    " Sua reflexão foi salva com sucesso!";
+
+  this.reset();
+});
+</script>
+</body>
+</html>

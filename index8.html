@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Checklist Educação Digital Crítica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #ecf0f1;
+            margin-bottom: 12px;
+            padding: 15px;
+            border-left: 6px solid #3498db;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.2s;
+        }
+
+        li.completed {
+            background: #d4edda;
+            border-left-color: #28a745;
+            text-decoration: line-through;
+            color: #155724;
+        }
+
+        button {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #3498db;
+            color: white;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Checklist de Aprenda e proteja</h1>
+    <p>Marque os hábitos que você pratica para ter um uso consciente e crítico da internet.</p>
+
+    <ul id="checklist">
+        <li><span>Verifico a fonte antes de compartilhar informações.</span> <button onclick="toggleItem(this)">✔</button></li>
+        <li><span>Protejo minhas senhas e dados pessoais online.</span> <button onclick="toggleItem(this)">✔</button></li>
+        <li><span>Analiso se o conteúdo é fato ou opinião.</span> <button onclick="toggleItem(this)">✔</button></li>
+        <li><span>Evito espalhar notícias falsas ou rumores.</span> <button onclick="toggleItem(this)">✔</button></li>
+        <li><span>Uso tempo de tela de forma equilibrada.</span> <button onclick="toggleItem(this)">✔</button></li>
+        <li><span>Não pratico nem tolero cyberbullying.</span> <button onclick="toggleItem(this)">✔</button></li>
+        <li><span>Diversifico minhas fontes de informação.</span> <button onclick="toggleItem(this)">✔</button></li>
+        <li><span>Respeito os outros e mantenho postura ética online.</span> <button onclick="toggleItem(this)">✔</button></li>
+        <li><span>Reviso minhas configurações de privacidade regularmente.</span> <button onclick="toggleItem(this)">✔</button></li>
+        <li><span>Produzo e compartilho conteúdo de forma responsável.</span> <button onclick="toggleItem(this)">✔</button></li>
+    </ul>
+   <button class="voltar"><a href="index3.html" style="color: #f0f4f8; text-decoration: line-through;">⬅ Voltar</button>
+</div>
+
+<script>
+    function toggleItem(button) {
+        const li = button.parentElement;
+        li.classList.toggle('completed');
+    }
+
+    function resetChecklist() {
+        const items = document.querySelectorAll('#checklist li');
+        items.forEach(item => item.classList.remove('completed'));
+    }
+</script>
+
+</body>
+</html>

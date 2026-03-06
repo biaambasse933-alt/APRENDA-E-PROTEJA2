@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        background: linear-gradient(90deg, #3498db, #2ecc71);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        color: white;
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li {
+        margin-left: 25px;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.05em;
+        font-weight: bold;
+        padding: 8px 15px;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+    
+    .nav-links a:hover {
+        background-color: rgba(255,255,255,0.25);
+        transform: scale(1.05);
+    }
+
+    
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links li {
+            margin: 10px;
+        }
+    }
+    .voltar {
+   background-color: rgb(6, 140, 251);
+  color: aliceblue;
+  width: 100px;               
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 30%;
+  margin-top: 1%;
+  
+}
+    .consideracoes {
+        padding: 60px 30px;
+        background-color: #f4f6f7;
+        text-align: center;
+    }
+
+    .consideracoes h2 {
+        color: #2c3e50;
+        margin-bottom: 40px;
+        font-size: 2.2em;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .card h3 {
+        margin-bottom: 15px;
+        color: #3498db;
+    }
+
+    .card p {
+        color: #555;
+        font-size: 1.05em;
+    }
+    
+
+</style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">Aprenda e proteja</div>
+    <ul class="nav-links">
+        <li><a href="index3.html">Início</a></li>
+        <li><a href="index4.html">Objetivos</a></li>
+        <li><a href="index5.html">pesquisar</a></li>
+        <li><a href="index6.html">sobre nos</a></li>
+    <li><a href="index7.html">perguntas e respostas</a></li>
+    <li><a href="index8.html">lista de tarefas</a></li>
+     <li><a href="index9.html">o que fazer</a></li>
+      <li><a href="index10.html">reflexão</a></li>
+    </ul>
+</nav>
+<section class="consideracoes" id="inicio">
+    <h2>Considerações Importantes</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3> Segurança</h3>
+            <p>
+                Nunca compartilhe senhas, dados pessoais ou informações
+                privadas na internet.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3> Respeito</h3>
+            <p>
+                Seja educado nas redes sociais. Palavras machucam,
+                mesmo quando são digitadas.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3> Pensamento Crítico</h3>
+            <p>
+                 Nem tudo o que está na internet é verdade.
+                Sempre desconfie e verifique.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3> Equilíbrio</h3>
+            <p>
+                Use a tecnologia com equilíbrio.
+                Reserve tempo para estudar, brincar e descansar.
+            </p>
+            <br> <br>
+            </div>
+            <button class="voltar"><a href="index2.html" style="color: azure; text-decoration: none;">⬅ Voltar</button>
+    </div>
+</section>            
+</body>
+</html>

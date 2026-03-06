@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Educação Digital Crítica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f8;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .question {
+            background: #ecf0f1;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            border-radius: 5px;
+        }
+
+        .question h3 {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 10px;
+            background: #e8f5e9;
+            padding: 12px;
+            border-radius: 5px;
+            color: #2e7d32;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 8px 14px;
+            border: none;
+            border-radius: 5px;
+            background: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Aprenda e proteja</h1>
+
+    <div class="question">
+        <h3>1. Como verificar se uma informação na internet é verdadeira?</h3>
+        <button onclick="toggleAnswer(0)">Ver resposta</button>
+        <div class="answer">
+            Conferindo a fonte, o autor, a data da publicação e comparando com outros
+            sites confiáveis.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>2. Quais os riscos de compartilhar dados pessoais online?</h3>
+        <button onclick="toggleAnswer(1)">Ver resposta</button>
+        <div class="answer">
+            Golpes, roubo de identidade, invasão de privacidade e uso indevido
+            das informações.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>3. O que são algoritmos das redes sociais?</h3>
+        <button onclick="toggleAnswer(2)">Ver resposta</button>
+        <div class="answer">
+            São sistemas que selecionam o conteúdo exibido com base no
+            comportamento do usuário.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>4. O que é desinformação?</h3>
+        <button onclick="toggleAnswer(3)">Ver resposta</button>
+        <div class="answer">
+            É a divulgação de informações falsas ou enganosas com o objetivo
+            de confundir ou manipular.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>5. O que é cyberbullying?</h3>
+        <button onclick="toggleAnswer(4)">Ver resposta</button>
+        <div class="answer">
+            Agressões, ameaças ou humilhações realizadas por meio digital,
+            como redes sociais e mensagens.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>6. Qual a diferença entre fato e opinião?</h3>
+        <button onclick="toggleAnswer(5)">Ver resposta</button>
+        <div class="answer">
+            Fato pode ser comprovado; opinião é um ponto de vista pessoal.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>7. Por que não devemos acreditar em tudo que vemos na internet?</h3>
+        <button onclick="toggleAnswer(6)">Ver resposta</button>
+        <div class="answer">
+            Porque qualquer pessoa pode publicar conteúdos falsos ou distorcidos.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>8. O que é pegada digital?</h3>
+        <button onclick="toggleAnswer(7)">Ver resposta</button>
+        <div class="answer">
+            É o rastro de informações que deixamos na internet por meio de
+            postagens, comentários e acessos.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>9. Como o uso excessivo de telas pode afetar a saúde?</h3>
+        <button onclick="toggleAnswer(8)">Ver resposta</button>
+        <div class="answer">
+            Pode causar ansiedade, problemas de sono, dificuldade de concentração
+            e sedentarismo.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>10. O que significa ter comportamento ético online?</h3>
+        <button onclick="toggleAnswer(9)">Ver resposta</button>
+        <div class="answer">
+            Respeitar os outros, não espalhar fake news e usar a internet
+            de forma responsável.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>11. O que são fake news?</h3>
+        <button onclick="toggleAnswer(10)">Ver resposta</button>
+        <div class="answer">
+            Notícias falsas criadas para enganar, manipular opiniões ou gerar
+            lucro.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>12. Por que é importante proteger senhas?</h3>
+        <button onclick="toggleAnswer(11)">Ver resposta</button>
+        <div class="answer">
+            Para evitar invasões de contas, vazamento de dados e golpes digitais.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>13. Como agir ao sofrer cyberbullying?</h3>
+        <button onclick="toggleAnswer(12)">Ver resposta</button>
+        <div class="answer">
+            Não responder às agressões, guardar provas e procurar ajuda
+            de adultos ou da escola.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>14. As redes sociais mostram a realidade completa?</h3>
+        <button onclick="toggleAnswer(13)">Ver resposta</button>
+        <div class="answer">
+            Não. Elas mostram recortes da realidade e muitas vezes uma versão
+            idealizada da vida.
+        </div>
+    </div>
+
+    <div class="question">
+        <h3>15. Qual o papel da escola na educação digital?</h3>
+        <button onclick="toggleAnswer(14)">Ver resposta</button>
+        <div class="answer">
+            Ensinar o uso consciente, crítico e responsável das tecnologias digitais.
+            
+           
+        </div>
+        
+    </div>
+ <button class="voltar"><a href="index3.html" style="color: #e8f5e9; text-decoration: none;">⬅ Voltar</button>
+</div>
+
+<script>
+    function toggleAnswer(index) {
+        const answers = document.querySelectorAll(".answer");
+        answers[index].style.display =
+            answers[index].style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
